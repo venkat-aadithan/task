@@ -10,15 +10,15 @@ $('document').ready(function(){
 				$('.form-row > div.row').find('input[name="age"]').val(value.age);
 				$('.form-row > div.row').find('select[name="gender"]').val(value.gender);
 			} else {
-				var mselected = value.gender == 'Male'?'selected="selected"':'';
-				var fselected = value.gender == 'Female'?'selected="selected"':'';
-				$('div.form-row').append('<div class="row"><div class="col-md-3"><label>Name:</label><input type="text" name="name" class="form-control" placeholder="Name" value="'+value.name+'"></div><div class="col-md-3"><label>Age:</label><input type="text" name="age" class="form-control" placeholder="Age" value="'+value.age+'"></div><div class="col-md-3"><label>Gender:</label><select name="gender" class="form-control"><option>Select</option><option'+mselected+'>Male</option><option '+fselected+'>Female</option></select></div><div class="col-md-3"><label>&nbsp;</label><br><button type="button" class="btn btn-danger delete"> Delete </button></div></div>');		
+				var mselected = value.gender == 'male'?'selected="selected"':'';
+				var fselected = value.gender == 'female'?'selected="selected"':'';
+				$('div.form-row').append('<div class="row"><div class="col-md-3"><label>Name:</label><input type="text" name="name" class="form-control" placeholder="Name" value="'+value.name+'"></div><div class="col-md-3"><label>Age:</label><input type="text" name="age" class="form-control" placeholder="Age" value="'+value.age+'"></div><div class="col-md-3"><label>Gender:</label><select name="gender" class="form-control"><option>Select</option><option value="male" '+mselected+'>Male</option><option value="female" '+fselected+'>Female</option></select></div><div class="col-md-3"><label>&nbsp;</label><br><button type="button" class="btn btn-danger delete"> Delete </button></div></div>');		
 			} 
 		});
 	}
 
 	$('.addmore').click(function(){
-		$('div.form-row').append('<div class="row"><div class="col-md-3"><label>Name:</label><input type="text" name="name" class="form-control" placeholder="Name"></div><div class="col-md-3"><label>Age:</label><input type="text" name="age" class="form-control" placeholder="Age"></div><div class="col-md-3"><label>Gender:</label><select name="gender" class="form-control"><option>Select</option><option>Male</option><option>Female</option></select></div><div class="col-md-3"><label>&nbsp;</label><br><button type="button" class="btn btn-danger delete"> Delete </button></div></div>');
+		$('div.form-row').append('<div class="row"><div class="col-md-3"><label>Name:</label><input type="text" name="name" class="form-control" placeholder="Name"></div><div class="col-md-3"><label>Age:</label><input type="text" name="age" class="form-control" placeholder="Age"></div><div class="col-md-3"><label>Gender:</label><select name="gender" class="form-control"><option>Select</option><option value="male">Male</option><option value="female">Female</option></select></div><div class="col-md-3"><label>&nbsp;</label><br><button type="button" class="btn btn-danger delete"> Delete </button></div></div>');
 	});
 
 	$('html body').on('click','.delete',function(){
